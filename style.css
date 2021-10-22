@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+    --bg: #eaeaea;
+    --color: #04040c;
+    --hover: #dcdcdc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+
+    background: var(--bg);
+    color: var(--color);
+    fill: var(--color);
+    stroke: var(--color);
+}
+
+code {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    white-space: pre;
+    background: var(--hover);
+    font-family: 'Fira Code';
+}
+
+#navbar {
+    position: fixed;
+    float: left;
+    width: 33%;
+    padding: 50px;
+    box-sizing: border-box;
+    border-right: 3px solid lightgray;
+    height: 100%;
+}
+
+#navbar header {
+    text-align: center;
+}
+
+#navbar div {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar a {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    text-decoration: none;
+    color: inherit;
+}
+
+#navbar a:hover {
+    background: var(--hover);
+}
+
+#main-doc {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 66%;
+    float: right;
+}
+
+#main-doc ul {
+    padding: 30px;
+}
+
+#main-doc section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#dmToggle {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 1.2em;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform, background, 0.2s;
+}
+
+#dmToggle:hover {
+    background: var(--hover);
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 900px) {
+    #navbar {
+        position: initial;
+        width: 100%;
+        padding-bottom: 0;
+        height: initial;
+        border: none;
+    }
+    #navbar div {
+        max-width: 100vw;
+        max-height: 30vh;
+        overflow-y: scroll;
+    }
+    #main-doc {
+        width: 100%;
+        float: right;
+    }
+}
